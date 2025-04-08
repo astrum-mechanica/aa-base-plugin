@@ -41,6 +41,7 @@ cd your-app-name
 rm -rf .git
 git init
 pre-commit install
+npm install # installs dependencies for linting
 ```
 
 ### Renaming the app
