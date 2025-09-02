@@ -1,4 +1,4 @@
-# Example plugin app for Alliance Auth - LAWN Version
+# Example plugin app for Alliance Auth - ASMEK Version
 
 This is an example plugin app for [Alliance Auth](https://gitlab.com/allianceauth/allianceauth) (AA) that can be used as starting point to develop custom plugins.
 It is a modified version of [allianceauth-example-plugin](https://gitlab.com/ErikKalkoken/allianceauth-example-plugin), that has been modified to hold our preffered setup.

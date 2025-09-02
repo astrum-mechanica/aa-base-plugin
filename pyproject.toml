@@ -34,11 +34,11 @@ dependencies = [
 optional-dependencies.test = [
 ]
 
-urls.Changelog = "https://gitlab.com/lawn-alliance/aa-base-plugin/-/blob/master/CHANGELOG.md"
-urls.Documentation = "https://gitlab.com/lawn-alliance/aa-base-plugin/-/blob/master/README.md"
-urls.Homepage = "https://gitlab.com/lawn-alliance/aa-base-plugin"
-urls.Source = "https://gitlab.com/lawn-alliance/aa-base-plugin"
-urls.Tracker = "https://gitlab.com/lawn-alliance/aa-base-plugin/-/issues"
+urls.Changelog = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/blob/master/CHANGELOG.md"
+urls.Documentation = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/blob/master/README.md"
+urls.Homepage = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
+urls.Source = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
+urls.Tracker = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/issues"
 
 [tool.flit.module]
 name = "aa_base_plugin"
@@ -66,8 +66,8 @@ import_heading_thirdparty = "Third Party"
 [tool.flake8]
 exclude = [ ".git", "*migrations*", ".tox", "dist", "htmlcov" ]
 max-line-length = 119
-select = [ "C", "E", "F", "W", "B", "B950" ]
-ignore = [ 'E203', 'E231', 'E501', 'W503', 'W291', 'W293' ]
+select = [ "B", "C", "E", "F", "W", "B9", "T4" ]
+ignore = [ "E203", "E266", "E501", "W503" ]
 
 [tool.pylint.'MASTER']
 ignore-patterns = [ "__init__.py", "auth_hooks.py", "apps.py", "admin.py", "runtests.py" ]
