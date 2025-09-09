@@ -1,7 +1,8 @@
 [build-system]
-build-backend = "flit_core.buildapi"
-
-requires = [ "flit-core>=3.2,<4" ]
+build-backend = "hatchling.build"
+requires = [
+    "hatchling",
+]
 
 [project]
 name = "aa-base-plugin"
@@ -40,52 +41,10 @@ urls.Homepage = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
 urls.Source = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
 urls.Tracker = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/issues"
 
-[tool.flit.module]
-name = "aa_base_plugin"
+[tool.hatch.version]
+path = "aa_base_plugin/__init__.py"
 
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-sections = [
-    "FUTURE",
-    "STDLIB",
-    "THIRDPARTY",
-    "DJANGO",
-    "ALLIANCEAUTH",
-    "FIRSTPARTY",
-    "LOCALFOLDER",
-]
-known_allianceauth = [ "allianceauth", "app_utils", "esi", "eveuniverse" ]
-known_django = [ "django" ]
-import_heading_stdlib = "Standard Library"
-import_heading_django = "Django"
-import_heading_allianceauth = "Alliance Auth"
-import_heading_firstparty = "AA Base Plugin"
-import_heading_thirdparty = "Third Party"
-
-[tool.flake8]
-exclude = [ ".git", "*migrations*", ".tox", "dist", "htmlcov" ]
-max-line-length = 119
-select = [ "B", "C", "E", "F", "W", "B9", "T4" ]
-ignore = [ "E203", "E266", "E501", "W503" ]
-
-[tool.pylint.'MASTER']
-ignore-patterns = [ "__init__.py", "auth_hooks.py", "apps.py", "admin.py", "runtests.py" ]
-ignore-paths = [ "testauth/", "^.*/tests/.*$", "^.*/migrations/.*$" ]
-
-[tool.pylint.'BASIC']
-good-names = [ "i", "j", "k", "ex" ]
-
-[tool.pylint.'FORMAT']
-max-line-length = 120
-
-[tool.pylint.'MESSAGES CONTROL']
-disable = [
-    "cyclic-import",
-    "fixme",
-    "wrong-import-position",
-    "import-error",
-    "protected-access",
-    "ungrouped-imports",
-    "too-few-public-methods",
+[tool.hatch.build]
+include = [
+    "/aa_base_plugin",
 ]
