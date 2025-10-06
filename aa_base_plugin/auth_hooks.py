@@ -2,6 +2,7 @@
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
+# Fleet Dash
 # AA Base Plugin
 from aa_base_plugin import __title__
 
