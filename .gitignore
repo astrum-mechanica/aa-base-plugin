@@ -12,4 +12,6 @@ venv/
 *.egg-info/
 .coverage
 coverage.xml
-.tox
+.tox/
+.esi-compatibility-date
+alliance_auth.sqlite3

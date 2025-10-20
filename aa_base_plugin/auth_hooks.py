@@ -1,7 +1,10 @@
+"""Hook into Alliance Auth"""
+
 # Alliance Auth
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
+# Fleet Dash
 # AA Base Plugin
 from aa_base_plugin import __title__
 
@@ -22,6 +25,7 @@ class ExampleMenuItem(MenuItemHook):
         )
 
     def render(self, request):
+        """Render the menu item"""
         if request.user.has_perm("aa_base_plugin.basic_access"):
             return MenuItemHook.render(self, request)
         return ""
@@ -29,9 +33,11 @@ class ExampleMenuItem(MenuItemHook):
 
 @hooks.register("menu_item_hook")
 def register_menu():
+    """Register the menu item"""
     return ExampleMenuItem()
 
 
 @hooks.register("url_hook")
 def register_urls():
-    return UrlHook(urls, "aa_base_plugin", r"^aa_base_plugin/")
+    """Register app urls"""
+    return UrlHook(urls, namespace="aa_base_plugin", base_url=r"^aa_base_plugin/")

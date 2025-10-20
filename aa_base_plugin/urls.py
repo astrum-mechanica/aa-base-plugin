@@ -3,9 +3,9 @@
 # Django
 from django.urls import path
 
-from . import views
+from . import __app_name__, views
 
-app_name: str = "aa_base_plugin"
+app_name: str = __app_name__
 
 urlpatterns = [
     path("", views.index, name="index"),

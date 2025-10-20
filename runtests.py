@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# pylint: skip-file
 # Standard Library
 import sys
 

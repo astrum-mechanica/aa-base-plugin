@@ -72,77 +72,50 @@ One small warning about picking names: Python is a bit particular about what spe
 | `/README.md`                                          | clear content                                                                          |
 | `/tox.ini`                                            | app name                                                                               |
 
-## Clearing migrations
-
-Instead of renaming your app in the migrations its easier to just recreate them later in the process. For this to work you need to delete the old migration files in your migrations folder.
-
-```bash
-rm your-app-name/migrations/0001_initial.py
-rm -rf your-app-name/migrations/_pycache
-```
-
 ## Installing into your dev AA
 
 Once you have cloned or copied all files into place and finished renaming the app you are ready to install it to your dev AA instance.
 
-Make sure you are in your venv. Then install it with pip in editable mode:
+Make sure you are in your venv and still in your app directory. Then install it with pip in editable mode:
 
 ```bash
-pip install -e your-app-name
+make dev-install
 ```
 
-First add your app to the Django project by adding the name of your app to INSTALLED_APPS in `settings/local.py`.
+Add your app to the Django project by adding the name of your app to INSTALLED_APPS in `settings/local.py`.
 
-Next we will create new migrations for your app:
+## Migrations
+
+Migrations are made using make, inside the app directory
 
 ```bash
-python manage.py makemigrations
+make migrations
 ```
-
-Then run a check to see if everything is setup correctly.
-
-```bash
-python manage.py check
-```
-
-In case they are errors make sure to fix them before proceeding.
 
 Next perform migrations to add your model to the database:
 
 ```bash
-python manage.py migrate
+make migrate
 ```
 
-Finally restart your AA server and that's it.
+## Pre Commit and tests
 
-## Running the test suite
+Run pre commit prior to committing
 
-This example app comes with a pre-configured test suite based on [tox](https://tox.wiki/en/).
+you only need to install the first time
 
-First you need to install tox into your local Python environment:
+```bash
+make pre-commit-install
 
-```sh
-pip install tox
+make pre-commit-checks
 ```
 
-Then you can run the test suite for a specific environment with:
+you can run tox tests as follows
 
-```sh
-tox -e py311-django42
+```bash
+make tox-tests
 ```
 
-You can use this command to see all configured test environments:
+## prep for release
 
-```sh
-tox -l
-```
-
-## Pylint linter
-
-The [pylint](https://pylint.readthedocs.io/en/stable/) linter is also pre-configured. Pylint is a popular linter that checks your app for common bugs, unidiomatic python code and makes suggestions for refactoring.
-
-You can run the linter manually with:
-
-```sh
-tox -e pylint
-```
+This readme should be replaced with a proper readme like README2.md
