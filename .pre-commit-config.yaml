@@ -121,7 +121,7 @@ repos:
         description: Ensure that files end with a newline.
 
   - repo: https://github.com/eslint/eslint
-    rev: 3c0d92214804c071def0149894da25ca0dfe6500  # frozen: v9.38.0
+    rev: 1947d9dbda7d9e0701eac3661d4ff4b53071d603  # frozen: v10.0.0-alpha.1
     hooks:
       - id: eslint
         name: ESLint
@@ -133,7 +133,7 @@ repos:
           - globals@16.3.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: 9b7d7bf350be72b9ba00c5577475f721b4adfa58  # frozen: v16.25.0
+    rev: 5550a364f2b5d3a9e731a9f4e231c5dc8c5f2e5b  # frozen: v16.26.1
     hooks:
       - id: stylelint
         name: Stylelint
@@ -174,14 +174,14 @@ repos:
         description: Enforce that python3.6+ type annotations are used instead of type comments.
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 61529b21391331d7cfd1f191df6293534a1fd79a  # frozen: 3.4.0
+    rev: 11ea70506fd878d26129b2b87746fd1a1f6b561b  # frozen: 3.6.0
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: Check for compliance with the definitions in the EditorConfig file.
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: c03f1b1e703cd967c5fd94e29c61f111e8b0eaf0  # frozen: 1.29.0
+    rev: 553731fe59437e0bd2cf18b10144116422bed259  # frozen: 1.29.1
     hooks:
       - id: django-upgrade
         name: Django upgrade
@@ -190,7 +190,7 @@ repos:
           - --target-version=4.2  # Minimum supported Django version for AA. Update as needed.
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: f90119b1b8bd9e46949d9592972b2c4c27d62a97  # frozen: v3.21.0
+    rev: 75992aaa40730136014f34227e0135f63fc951b4  # frozen: v3.21.2
     hooks:
       - id: pyupgrade
         name: PyUpgrade
@@ -227,8 +227,8 @@ repos:
         name: Black disable checker
         description: Check for black disable comments.
 
-  - repo: https://github.com/psf/black
-    rev: af0ba72a73598c76189d6dd1b21d8532255d5942  # frozen: 25.9.0
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 2892f1f81088477370d4fbc56545c05d33d2493f  # frozen: 25.11.0
     hooks:
       - id: black
         name: Black
@@ -248,7 +248,7 @@ repos:
           - --target-version=py310  # Minimum required Python version for AA. Update as needed.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: ff29be1a1ba8029d9375882aa2c812b62112a593  # frozen: 0.7.22
+    rev: 2d496dbc18e31b83a1596685347ffe0b6041daf0  # frozen: 1.0.0
     hooks:
       - id: mdformat
         name: Mdformat
@@ -267,7 +267,7 @@ repos:
         description: Format the tox.ini file.
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 68b1ed526e7533ac54a2e42874b99ae6c26807a2  # frozen: v2.11.0
+    rev: d252a2a7678b47d1f2eea2f6b846ddfdcd012759  # frozen: v2.11.1
     hooks:
       - id: pyproject-fmt
         name: pyproject.toml formatter
@@ -285,7 +285,7 @@ repos:
         description: Validate the pyproject.toml file.
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: 4cab7ca4eae88b75960fcf2479b8ddd377dd4ce2  # frozen: v3.3.9
+    rev: e16f942166511d6fb4427e503a734152fae0c4fe  # frozen: v4.0.4
     hooks:
       - id: pylint
         name: Pylint
@@ -294,7 +294,7 @@ repos:
           - --py-version=3.10  # Minimum required Python version for AA. Update as needed.
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 83b816d020105076daac266dbf6bfed199a2da93  # frozen: 0.34.1
+    rev: 16a6ad2fead09286ee6eb6b0a3fab55655a6c22a  # frozen: 0.35.0
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions
