@@ -31,21 +31,17 @@ classifiers = [
 ]
 dynamic = [ "description", "version" ]
 dependencies = [
-    "allianceauth>=4.11,<5",
+    "allianceauth>=4.12,<5",
 ]
-optional-dependencies.test = [
-]
-
+optional-dependencies.test = []
 urls.Changelog = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/blob/master/CHANGELOG.md"
 urls.Documentation = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/blob/master/README.md"
 urls.Homepage = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
 urls.Source = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
 urls.Tracker = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/issues"
 
-[tool.hatch.version]
-path = "aa_base_plugin/__init__.py"
-
-[tool.hatch.build]
-include = [
+[tool.hatch]
+build.include = [
     "/aa_base_plugin",
 ]
+version.path = "aa_base_plugin/__init__.py"

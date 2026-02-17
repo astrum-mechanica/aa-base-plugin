@@ -6,11 +6,16 @@
 {% block header_nav_brand %}
     {% translate "Page Title" %}
 {% endblock header_nav_brand %}
+
 {% block header_nav_collapse_left %}
+    {% include "aa_base_plugin/partials/navigation/left-navigation.html" %}
 {% endblock %}
 
 {% block header_nav_collapse_right %}
+    {% include "aa_base_plugin/partials/navigation/right-navigation.html" %}
 {% endblock header_nav_collapse_right %}
+
+
 {% block content %}
     <div class="aa-base-plugin">
         {% block details %}{% endblock %}

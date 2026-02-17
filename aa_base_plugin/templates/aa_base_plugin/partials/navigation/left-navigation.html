@@ -1,0 +1,7 @@
+{% load i18n %}
+{% load navactive %}
+
+{% url 'aa_base_plugin:index' as url_index %}
+{% navactive request 'aa_base_plugin:index' as navactive_index %}
+{% translate "Home" as l10n_index %}
+{% include "aa_base_plugin/partials/navigation/navigation-item.html" with url=url_index navactive=navactive_index title=l10n_index %}

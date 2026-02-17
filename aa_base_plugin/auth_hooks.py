@@ -4,9 +4,9 @@
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
-# Fleet Dash
 # AA Base Plugin
-from aa_base_plugin import __title__
+# Fleet Dash
+from aa_base_plugin import __title_translated__
 
 from . import urls
 
@@ -18,7 +18,7 @@ class ExampleMenuItem(MenuItemHook):
         # setup menu entry for sidebar
         MenuItemHook.__init__(
             self,
-            __title__,
+            __title_translated__,
             "fas fa-cube fa-fw",
             "aa_base_plugin:index",
             navactive=["aa_base_plugin:"],
