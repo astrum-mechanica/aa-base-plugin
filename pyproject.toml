@@ -11,13 +11,14 @@ license = { file = "LICENSE" }
 authors = [
     { name = "John Doe", email = "john.doe@example.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.14"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
@@ -25,13 +26,12 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
-    "Programming Language :: Python :: 3.14",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dynamic = [ "description", "version" ]
 dependencies = [
-    "allianceauth>=4.12,<5",
+    "allianceauth>5",
 ]
 optional-dependencies.test = []
 urls.Changelog = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/blob/master/CHANGELOG.md"
