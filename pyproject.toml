@@ -44,7 +44,7 @@ urls.Source = "https://gitlab.com/astrum-mechanica/aa-base-plugin"
 urls.Tracker = "https://gitlab.com/astrum-mechanica/aa-base-plugin/-/issues"
 
 [tool.hatch]
+version.path = "aa_base_plugin/__init__.py"
 build.include = [
     "/aa_base_plugin",
 ]
-version.path = "aa_base_plugin/__init__.py"
